@@ -1,6 +1,6 @@
 body {
     background: white;
-    margin: 35px 10px;
+    margin: 20px 10px;
     font-family: 'Noto Sans', sans-serif;
     
   }
@@ -26,12 +26,14 @@ body {
   
   
   ul {
+    
     width: 30%;
-    min-width: 600px;
+    min-width: 300px;
     margin: 10px auto;
     text-align: left;
   }
   ul > li {
+    
     margin: 10px 0;
     line-height: 1.5;
   }
@@ -43,7 +45,7 @@ body {
   
   .quote {
     width: 30%;
-    min-width: 600px;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     margin: 10px auto;
@@ -65,6 +67,7 @@ body {
   
   #tribute-info {
     margin: 20px 0;
+    width: 100%;
   
   }
   
