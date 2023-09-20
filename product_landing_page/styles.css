@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #D3D3D3;
+  }
+  
+  #logo {
+    width: 60vw;
+  }
+  
+  
+  #header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 4rem 0 4rem;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: #D3D3D3;
+    min-height: 75px;
+  
+  }
+  #header-img {
+    width: 100%;
+    height: 100%;
+    max-width: 350px;
+    min-width: 300px;
+  }
+  
+  .nav-link {
+  
+    text-decoration: none;
+    color: black;
+    
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35vw;
+    list-style: none;
+    padding: 1rem;
+  }
+  
+  
+  #main {
+    position: relative;
+    top: 7rem;
+    
+  }
+  .first-part {
+    text-align: center;
+    margin: 0 auto;
+    
+    
+  }
+  
+  
+  #submit {
+    margin: 10px auto;
+    display: block;
+    padding: 0.2rem 2rem;
+    border: 1px solid transparent;
+    background-color: #f9b208;
+    font-weight: 800;
+    font-size: 15px;
+  
+  }
+  #email {
+    width: 20rem;
+    height: 2rem;
+    margin-top: 15px;
+    padding: 5px;
+  }
+  
+  
+  #features {
+    margin: 5rem 0;
+    
+  }
+  
+  .feature {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    margin-bottom: 3rem;
+    width: 70%;
+  }
+  
+  .desc {
+    display: grid;
+    justify-self: start;
+  }
+  .icon {
+    display: grid;
+    justify-self: end;
+    font-size: 2.5rem;
+    margin-right: 4rem;
+    color: orange;
+  
+  }
+  
+  #how_it_works {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem; 
+    
+    
+  }
+  
+  .block {
+    
+    border: 1px solid black;
+    text-align: center;
+    padding: 1rem;
+    width: 15vw;
+    height: 20vh;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  @media only screen and (max-width: 750px) {
+    nav ul {
+      flex-direction: column;
+      padding: 0 1rem;
+    } 
+  }
+  @media only screen and (max-width: 500px) {
+    #header {
+      flex-direction: column;
+    }
+  
+    #main {
+      top: 10rem;
+    }
+  }
