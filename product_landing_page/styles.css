@@ -128,23 +128,89 @@
     border: 1px solid black;
     text-align: center;
     padding: 1rem;
-    width: 15vw;
-    height: 20vh;
+    width: 19rem;
+    height: 18rem;
+    margin: 10px;
+    padding: 0;
+    align-items: center;
+
+    
     
   }
+
+  .title {
+    border: 1px solid transparent;
+    background-color: #C0C0C0;
+    padding: 12px;
+  }
+
+  .price {
+    margin: 1rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  .info p {
+    margin: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  #button-select {
+    border: 1px solid transparent;
+    background-color: #f9b208;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 1rem;
+    font-size: 1rem;
+  }
+
+  footer {
+    width: 60rem;
+    background-color: #C0C0C0;
+    margin: 0 auto;
+    
+  }
+
+  .footer {
+    margin: 2rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footer ul {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    
+    
+  }
+
+  .footer ul li{
+    display: inline-block;
+    
+    
+  }
+
   
   
   
   
   
   
+  @media only screen and (max-width: 1100px) {
+    footer {
+      width: 100%;
+    }
+  }
   
-  
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 800px) {
     nav ul {
       flex-direction: column;
       padding: 0 1rem;
     } 
+    #pricing {
+      flex-direction: column;
+    }
   }
   @media only screen and (max-width: 500px) {
     #header {
