@@ -1,87 +1,94 @@
-/*https://technical-documentation-page.freecodecamp.rocks/ */\
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
 
     <title>Doc Page</title>
   </head>
   <body>
     <nav id="navbar">
       <header>
-        <p>JS Documentation</p>
+        <p>GoLang</p>
       </header>
       <a href="#introduction" class="nav-link">Introduction</a>
-      <a href='#what_you_should_already_know' class="nav-link">What you should already know</a>
-      <a href='#javascript_and_java' class="nav-link">JavaScript and Java</a>
+      <a href='#history' class="nav-link">History</a>
+      <a href='#design' class="nav-link">Design</a>
       <a href='#hello_world' class="nav-link">Hello world</a>
-      <a href='#variables' class="nav-link">Variables</a>
-      <a href='#declaring_variables' class="nav-link">Declaring Variables</a>
+      <a href='#omissions' class="nav-link">Omissions</a>
+      <a href='#style' class="nav-link">Style</a>
     </nav>
     <main id="main-doc">
       <section class="main-section" id="introduction">
         <header>
           <p>Introduction</p>
         </header>
-        <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them.</p>
-        <p>JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects; for example:</p>
+        <p>Go is a statically typed, compiled high-level programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but also has memory safety, garbage collection, structural typing, and CSP-style concurrency. It is often referred to as Golang because of its former domain name, golang.org, but its proper name is Go. </p>
+        <p>There are two major implementations: </p>
         <ul>
-          <li>Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.</li>
-          <li>Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.</li>
+          <li>Google's self-hosting "gc" compiler toolchain, targeting multiple operating systems and WebAssembly.</li>
+          <li>gofrontend, a frontend to other compilers, with the libgo library. With GCC the combination is gccgo; with LLVM the combination is gollvm.</li>
+        </ul>
+        <p>A third-party source-to-source compiler, GopherJS, compiles Go to JavaScript for front-end web development. </p>
+      </section>
+      <section class="main-section" id="history">
+        <header>
+          <p>History</p>
+        </header>
+        <p>Go was designed at Google in 2007 to improve programming productivity in an era of multicore, networked machines and large codebases.[21] The designers wanted to address criticism of other languages in use at Google, but keep their useful characteristics:</p>
+        <ul>
+          <li>Static typing and run-time efficiency (like C)</li>
+          <li>Readability and usability (like Python)</li>
+          <li>High-performance networking and multiprocessing</li>
         </ul>
       </section>
-      <section class="main-section" id="what_you_should_already_know">
+      <section class="main-section" id="design">
         <header>
-          <p>What You Should Already Know</p>
+          <p>Design</p>
         </header>
-        <p>This guide assumes you have the following basic background:</p>
-        <ul>
-          <li>A general understanding of the Internet and the World Wide Web (WWW).</li>
-          <li>Good working knowledge of HyperText Markup Language (HTML).</li>
-          <li>Some programming experience. If you are new to programming, try one of the tutorials linked on the main page about JavaScript.</li>
-        </ul>
-      </section>
-      <section class="main-section" id="javascript_and_java">
-        <header>
-          <p>JavaScript and Java</p>
-        </header>
-        <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The JavaScript language resembles Java but does not have Java's static typing and strong type checking. JavaScript follows most Java expression syntax, naming conventions and basic control-flow constructs which was the reason why it was renamed from LiveScript to JavaScript. </p>
-        <p> In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values. JavaScript has a prototype-based object model instead of the more common class-based object model. The prototype-based model provides dynamic inheritance; that is, what is inherited can vary for individual objects. JavaScript also supports functions without any special declarative requirements. Functions can be properties of objects, executing as loosely typed methods.</p>
+        <p>Go is influenced by C, but with an emphasis on greater simplicity and safety.</p>
+        <p> Go's syntax includes changes from C aimed at keeping code concise and readable</p>
+        <p>Go has a number of built-in types, including numeric ones (byte, int64, float32, etc.), booleans, and byte strings (string). Strings are immutable; built-in operators and keywords (rather than functions) provide concatenation, comparison, and UTF-8 encoding/decoding. Record types can be defined with the struct keyword. </p>
       </section>
       <section class="main-section" id="hello_world">
         <header>
           <p>Hello world</p>
         </header>
         <p>To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:</p>
-        <code>function greetMe(yourName) { alert("Hello " + yourName); }</code>
-        <code>greetMe("World")</code>
-        <p>Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!</p>
+        <code>package main
+          
+          import "fmt"
+          
+          func main() {
+              fmt.Println("hello world")
+          }
+        </code>
+        <p>To run the program, put the code in hello-world.go and use go run.</p>
+        <code>$ go run hello-world.go</code>
       </section>
-      <section class="main-section" id="variables">
+      <section class="main-section" id="omissions">
         <header>
-          <p>Variables</p>
+          <p>Omissions</p>
         </header>
-        <p>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</p>
-        <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
-        <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and _name.</p>
+        <p>Go deliberately omits certain features common in other languages, including (implementation) inheritance, assertions, pointer arithmetic, implicit type conversions, untagged unions, and tagged unions. The designers added only those facilities that all three agreed on. </p>
+        <p>Of the omitted language features, the designers explicitly argue against assertions and pointer arithmetic, while defending the choice to omit type inheritance as giving a more useful language, encouraging instead the use of interfaces to achieve dynamic dispatch and composition to reuse code. Composition and delegation are in fact largely automated by struct embedding; according to researchers Schmager et al., this feature "has many of the drawbacks of inheritance: it affects the public interface of objects, it is not fine-grained (i.e, no method-level control over embedding), methods of embedded objects cannot be hidden, and it is static", making it "not obvious" whether programmers will overuse it to the extent that programmers in other languages are reputed to overuse inheritance. </p>
+        <p>Exception handling was initially omitted in Go due to lack of a "design that gives value proportionate to the complexity". An exception-like panic/recover mechanism that avoids the usual try-catch control structure was proposed and released in the March 30, 2010 snapshot. The Go authors advise using it for unrecoverable errors such as those that should halt an entire program or server request, or as a shortcut to propagate errors up the stack within a package. Across package boundaries, Go includes a canonical error type, and multi-value returns using this type are the standard idiom. </p>
       </section>
-      <section class="main-section" id="declaring_variables">
+      <section class="main-section" id="style">
         <header>
-          <p>Declaring Variables</p>
+          <p>Style</p>
         </header>
-        <p>You can declare a variable in three ways:</p>
-        <p>With the keyword var. For example,</p>
-        <code>var x = 42.</code>
-        <p>This syntax can be used to declare both local and global variables.</p>
-        <p>By simply assigning it a value. For example,</p>
-        <code>x = 42.</code>
-        <p>This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use this variant.</p>
-        <p> With the keyword let. For example,</p>
-        <code>let y = 13.</code>
-        <p>This syntax can be used to declare a block scope local variable. See Variable scope below.</p>
+        <p>The Go authors put substantial effort into influencing the style of Go programs: </p>
+        
+        <p>Indentation, spacing, and other surface-level details of code are automatically standardized by the gofmt tool. It uses tabs for indentation and blanks for alignment. Alignment assumes that an editor is using a fixed-width font. golint does additional style checks automatically, but has been deprecated and archived by the Go maintainers.</p>
+        <p>A combined declaration/initialization operator was introduced that allows the programmer to write: </p>
+        <code>i := 3</code>
+        <code>s := "Hello, world!"</code>
+        <p>This contrasts with C's</p>
+        <code>int i = 3;</code>
+        <code>const char *s = "Hello, world!";</code>
       </section>
     </main>
   </body>
